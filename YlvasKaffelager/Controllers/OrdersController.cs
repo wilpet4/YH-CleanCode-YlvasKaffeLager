@@ -6,17 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YlvasKaffelager.DataModels;
+using YlvasKaffelager.Repositories.Interfaces;
 using YlvasKaffelager.ViewModels;
 
 namespace YlvasKaffelager.Controllers
 {
     public class OrdersController : Controller
     {
-        public DbContext _dbContext { get; set; }
+        private IProductRepository _repository { get; }
         public int NumberOfOrders { get; set; }
-        public OrdersController()
+        public OrdersController(IProductRepository repository)
         {
-            _dbContext = new DbContext();
+            _repository = repository;
 
             NumberOfOrders = 0;
         }
@@ -30,7 +31,7 @@ namespace YlvasKaffelager.Controllers
         [HttpPost]
         public IActionResult Orders(OrderViewModel model)
         {
-            var coffee = _dbContext.GetCoffe(model.CoffeeId);
+            var coffee = _repository.GetCoffe(model.CoffeeId);
             
             int amount = model.Amount;
 
@@ -68,7 +69,7 @@ namespace YlvasKaffelager.Controllers
                 Total = model.Total,
             };
 
-            _dbContext.AddOrder(order);
+            _repository.AddOrder(order);
 
             return View("Completed");
         }

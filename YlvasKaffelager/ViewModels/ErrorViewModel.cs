@@ -1,4 +1,4 @@
-namespace YlvasKaffelager.Models
+namespace YlvasKaffelager.ViewModels
 {
     public class ErrorViewModel
     {

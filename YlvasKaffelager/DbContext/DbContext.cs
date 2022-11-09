@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YlvasKaffelager.DataModels;
+using YlvasKaffelager.DbContext.Interface;
 
-namespace YlvasKaffelager
+namespace YlvasKaffelager.DbContext
 {
-    public class DbContext
+    public class DbContext : IDbContext
     {
-        public List<Coffee> Coffees { get; set; } = new List<Coffee>
+        public DbContext()
+        {
+            Orders = new List<Order>();
+        }
+
+        private List<Coffee> Coffees { get; set; } = new List<Coffee>
         {
             new Coffee
             {
@@ -37,12 +43,7 @@ namespace YlvasKaffelager
             }
         };
 
-        public List<Order> Orders { get; set; }
-
-        public DbContext()
-        {
-            Orders = new List<Order>();
-        }
+        private List<Order> Orders { get; set; }
 
         public Coffee GetCoffe(int Id)
         {

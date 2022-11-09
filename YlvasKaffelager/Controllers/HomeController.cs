@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using YlvasKaffelager.Models;
+using YlvasKaffelager.ViewModels;
 
 namespace YlvasKaffelager.Controllers
 {
