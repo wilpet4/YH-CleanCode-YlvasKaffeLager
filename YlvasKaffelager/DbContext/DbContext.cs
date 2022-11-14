@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YlvasKaffelager.DataModels;
-using YlvasKaffelager.DbContext.Interface;
+using YlvasKaffelager.DbContext.Interfaces;
 
 namespace YlvasKaffelager.DbContext
 {

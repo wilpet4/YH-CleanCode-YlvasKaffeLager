@@ -1,6 +1,6 @@
 ﻿using YlvasKaffelager.DataModels;
 
-namespace YlvasKaffelager.DbContext.Interface
+namespace YlvasKaffelager.DbContext.Interfaces
 {
     public interface IDbContext
     {
