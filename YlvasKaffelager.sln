@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YlvasKaffelager", "YlvasKaffelager\YlvasKaffelager.csproj", "{C71C5E08-8F95-41D9-8D2E-CC54F2C389D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YlvasKaffelager", "YlvasKaffelager\YlvasKaffelager.csproj", "{C71C5E08-8F95-41D9-8D2E-CC54F2C389D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YlvasKaffelager.Tests", "YlvasKaffelager.Tests\YlvasKaffelager.Tests.csproj", "{91DD1DDF-0E65-4654-887B-FDF3E3BD09F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C71C5E08-8F95-41D9-8D2E-CC54F2C389D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C71C5E08-8F95-41D9-8D2E-CC54F2C389D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C71C5E08-8F95-41D9-8D2E-CC54F2C389D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91DD1DDF-0E65-4654-887B-FDF3E3BD09F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91DD1DDF-0E65-4654-887B-FDF3E3BD09F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91DD1DDF-0E65-4654-887B-FDF3E3BD09F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91DD1DDF-0E65-4654-887B-FDF3E3BD09F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

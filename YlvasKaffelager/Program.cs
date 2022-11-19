@@ -1,5 +1,5 @@
 using YlvasKaffelager.DbContext;
-using YlvasKaffelager.DbContext.Interface;
+using YlvasKaffelager.DbContext.Interfaces;
 using YlvasKaffelager.Repositories;
 using YlvasKaffelager.Repositories.Interfaces;
 
