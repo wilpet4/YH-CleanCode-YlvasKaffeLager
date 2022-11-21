@@ -9,7 +9,7 @@ namespace YlvasKaffelager.Tests
         }
 
         [Fact]
-        public void Shoud_Return_Coffee()
+        public void Should_Return_Coffee()
         {
 
         }
