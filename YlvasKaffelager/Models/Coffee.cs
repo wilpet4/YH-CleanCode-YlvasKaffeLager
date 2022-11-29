@@ -8,5 +8,6 @@ namespace YlvasKaffelager.DataModels
 {
     public class Coffee : Product
     {
+
     }
 }
