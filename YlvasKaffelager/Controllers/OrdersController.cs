@@ -8,17 +8,20 @@ using System.Threading.Tasks;
 using YlvasKaffelager.DataModels;
 using YlvasKaffelager.Repositories.Interfaces;
 using YlvasKaffelager.ViewModels;
+using YlvasKaffelager.Logic;
+using YlvasKaffelager.Logic.Decorators;
 
 namespace YlvasKaffelager.Controllers
 {
     public class OrdersController : Controller
     {
-        private IProductRepository _repository { get; }
+        private IProductRepository _repository { get; init; }
+        public Calculations Calculations { get; init; }
         public int NumberOfOrders { get; set; }
-        public OrdersController(IProductRepository repository)
+        public OrdersController(IProductRepository repository, Calculations calculations) // Dependency Injection för att komma åt repository.
         {
             _repository = repository;
-
+            Calculations = calculations;
             NumberOfOrders = 0;
         }
         public IActionResult Index()
@@ -42,7 +45,7 @@ namespace YlvasKaffelager.Controllers
                 Email = model.Email,
                 Brand = coffee.Brand,
                 Amount = amount,
-                Total = (amount * coffee.Price)
+                Total = new CoffeeDecorator(Calculations).PriceTotal(coffee.Price, model.Amount)
             };
 
             return View("ViewOrder", viewModel);

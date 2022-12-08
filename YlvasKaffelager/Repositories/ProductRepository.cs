@@ -12,7 +12,7 @@ namespace YlvasKaffelager.Repositories
     public class ProductRepository : IProductRepository
     {
         public IDbContext _context { get; }
-        public ProductRepository(IDbContext context)
+        public ProductRepository(IDbContext context) // Dependency Injection för att komma åt databas.
         {
             _context = context;
         }
