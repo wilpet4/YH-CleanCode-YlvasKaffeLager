@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YlvasKaffelager.DataModels;
-using YlvasKaffelager.DbContext.Interfaces;
+using YlvasKaffelager.Database.Interfaces;
 
-namespace YlvasKaffelager.DbContext
+namespace YlvasKaffelager.Database
 {
     public class DbContext : IDbContext
     {

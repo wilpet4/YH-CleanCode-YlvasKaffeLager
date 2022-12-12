@@ -1,5 +1,5 @@
-using YlvasKaffelager.DbContext;
-using YlvasKaffelager.DbContext.Interfaces;
+using YlvasKaffelager.Database;
+using YlvasKaffelager.Database.Interfaces;
 using YlvasKaffelager.Repositories;
 using YlvasKaffelager.Repositories.Interfaces;
 
@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IDbContext, DbContext>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();

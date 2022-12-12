@@ -3,7 +3,7 @@ namespace YlvasKaffelager.Logic.Decorators
 {
     public class CoffeeDecorator : CalculationsDecoratorBase
     {
-        private decimal vat = 1.06M;
+        private decimal vat = 1.06m;
         public CoffeeDecorator(Calculations calculations) : base(calculations)
         {
 
