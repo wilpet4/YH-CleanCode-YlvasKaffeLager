@@ -1,6 +1,6 @@
 ﻿namespace YlvasKaffelager.Logic.Decorators
 {
-    public class CalculationsDecoratorBase : Calculations
+    public abstract class CalculationsDecoratorBase : Calculations
     {
         protected Calculations calculations;
         public CalculationsDecoratorBase(Calculations calculations)
